@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div>
+      <div className='info'>
         <label>Name:</label>
         <input type="text" />
         <label>Age:</label>
