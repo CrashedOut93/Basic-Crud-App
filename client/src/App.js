@@ -7,6 +7,11 @@ function App() {
   const [country, setCountry] = useState('');
   const [position, setPosition] = useState('');
   const [wage, setWage] = useState(0);
+
+  const displayInfo = () => {
+    console.log(name + age + country + position + wage)
+  }
+
   return (
     <div className="App">
       <div className='info'>
@@ -30,7 +35,7 @@ function App() {
           <input type="text" onChange={(event) => {
             setWage(event.target.value);
           }} />
-        <button>Add Employee</button>
+        <button onClick={displayInfo}>Add Employee</button>
       </div>
     </div>
   );
