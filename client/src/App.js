@@ -15,6 +15,7 @@ function App() {
         <input type="text" />
         <label>Wage (year):</label>
         <input type="text" />
+        <button>Add Employee</button>
       </div>
     </div>
   );
