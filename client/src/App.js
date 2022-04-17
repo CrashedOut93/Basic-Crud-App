@@ -51,6 +51,7 @@ function App() {
           }} />
         <button onClick={addEmployee}>Add Employee</button>
       </div>
+      <br  />
     </div>
   );
 }
