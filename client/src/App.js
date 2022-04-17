@@ -10,7 +10,15 @@ function App() {
   const [wage, setWage] = useState(0);
 
   const addEmployee = () => {
-    Axios.post('http://localhost:3001/create', )
+    Axios.post('http://localhost:3001/create', {
+      name: name, 
+      age: age, 
+      country: country, 
+      position: position, 
+      wage: wage,
+    }).then(() => {
+      console.log('success');
+    })
   }
 
   const displayInfo = () => {
