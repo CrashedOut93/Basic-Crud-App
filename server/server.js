@@ -36,7 +36,7 @@ app.get('/employees', (req, res) => {
         if (err) {
             console.log(err);
         }else{
-            
+            res.send(result);
         }
     })
 })
