@@ -31,7 +31,9 @@ app.post('/create', (req, res) => {
     );
 })
 
-app.get('/')
+app.get('/employees', (req, res) => {
+    
+})
 
 app.listen(3001, () => {
     console.log("Server running")
