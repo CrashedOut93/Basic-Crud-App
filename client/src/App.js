@@ -61,7 +61,7 @@ function App() {
       </div>
       <br  />
         <div className="employees">
-          <button>Show Employees</button>
+          <button onClick={getEmployees}>Show Employees</button>
         </div>
     </div>
   );
