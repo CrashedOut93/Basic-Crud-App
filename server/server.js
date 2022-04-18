@@ -32,5 +32,5 @@ app.post('/create', (req, res) => {
 })
 
 app.listen(3001, () => {
-    console.log("works")
+    console.log("Server running")
 })

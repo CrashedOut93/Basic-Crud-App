@@ -9,6 +9,8 @@ function App() {
   const [position, setPosition] = useState('');
   const [wage, setWage] = useState(0);
 
+  const [employeeList, setEmployeeList] = useState([]);
+
   const addEmployee = () => {
     
     Axios.post('http://localhost:3001/create', {
@@ -20,6 +22,12 @@ function App() {
     }).then(() => {
       console.log('success');
     })
+  }
+
+  const getEmployees = () =>{
+    Axios.get('http://localhost:3001/employees').then((response) => {
+      console.log(response);
+    });
   }
 
   const displayInfo = () => {
@@ -52,6 +60,9 @@ function App() {
         <button onClick={addEmployee}>Add Employee</button>
       </div>
       <br  />
+        <div className="employees">
+          <button>Show Employees</button>
+        </div>
     </div>
   );
 }
