@@ -62,6 +62,10 @@ function App() {
       <br  />
         <div className="employees">
           <button onClick={getEmployees}>Show Employees</button>
+
+          {employeeList.map((val, key) => {
+              return <div>{val.name}</div>
+          })};
         </div>
     </div>
   );
