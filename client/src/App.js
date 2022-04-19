@@ -66,11 +66,11 @@ function App() {
           {employeeList.map((val, key) => {
               return (
                 <div className='employee'>
-                  <h3>{val.name}</h3>
-                  <h3>{val.age}</h3>
-                  <h3>{val.country}</h3>
-                  <h3>{val.position}</h3>
-                  <h3>{val.wage}</h3>
+                  <h3>Name: {val.name}</h3>
+                  <h3>Age: {val.age}</h3>
+                  <h3>Country: {val.country}</h3>
+                  <h3>Position: {val.position}</h3>
+                  <h3>Wage: {val.wage}</h3>
                 </div>
               );
           })}
