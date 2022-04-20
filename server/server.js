@@ -41,6 +41,10 @@ app.get('/employees', (req, res) => {
     })
 })
 
+app.put('/update', (req, res) => {
+    
+})
+
 app.listen(3001, () => {
     console.log("Server running")
 })
