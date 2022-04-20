@@ -42,7 +42,8 @@ app.get('/employees', (req, res) => {
 })
 
 app.put('/update', (req, res) => {
-    
+    const id = req.body.id;
+    db.query('UPDATE SET employees wage = ? WHERE id = ?', [])
 })
 
 app.listen(3001, () => {
