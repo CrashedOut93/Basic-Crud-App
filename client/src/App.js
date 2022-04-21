@@ -36,7 +36,7 @@ function App() {
     });
   }
 
-  const updateEmployeeWage = () => {
+  const updateEmployeeWage = (id) => {
     Axios.put('http://localhost:3001/update', {wage: newWage, id: id})
   }
 
@@ -92,7 +92,7 @@ function App() {
                         setNewWage(event.target.value);
                       }}
                       /> {" "}
-                    <button>Update</button>
+                    <button onClick={() => {updateEmployeeWage(val.id)}}>Update</button>
                   </div>
                 </div>
               );
