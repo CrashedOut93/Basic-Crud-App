@@ -40,7 +40,8 @@ function App() {
     Axios.put('http://localhost:3001/update', {wage: newWage, id: id}).then(
       (response) => {
       setEmployeeList(employeeList.map((val) => {
-          return val.id == ? {id: val.id, name: val.name, age: val.age, country: val.country, position: val.position, wage: val.wage}
+          return val.id == id ? {id: val.id, name: val.name, age: val.age, country: val.country, position: val.position, wage: val.newWage}
+          : val
       }));
     })
   }
