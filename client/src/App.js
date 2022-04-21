@@ -36,6 +36,10 @@ function App() {
     });
   }
 
+  const updateEmployeeWage = () => {
+    Axios.put('http://localhost:3001/update',)
+  }
+
   const displayInfo = () => {
     console.log(name + age + country + position + wage)
   }
