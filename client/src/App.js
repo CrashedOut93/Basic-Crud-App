@@ -8,7 +8,7 @@ function App() {
   const [country, setCountry] = useState('');
   const [position, setPosition] = useState('');
   const [wage, setWage] = useState(0);
-  const
+  const [newWage, setNewWage] = useState(0);
 
   const [employeeList, setEmployeeList] = useState([]);
 
@@ -81,7 +81,13 @@ function App() {
                   </div>
                   <div>
                     {" "}
-                    <input type='text' placeholder='2000...' /> {" "}
+                    <input 
+                      type='text' 
+                      placeholder='2000...' 
+                      onChange={(event) => {
+                        setNewWage(event.target.value);
+                      }}
+                      /> {" "}
                     <button>Update</button>
                   </div>
                 </div>
