@@ -37,9 +37,10 @@ function App() {
   }
 
   const updateEmployeeWage = (id) => {
-    Axios.put('http://localhost:3001/update', {wage: newWage, id: id}).then((response) => {
+    Axios.put('http://localhost:3001/update', {wage: newWage, id: id}).then(
+      (response) => {
       setEmployeeList(employeeList.map((val) => {
-
+          return val.id == ? {id: val.id, name: val.name, age: val.age, country: val.country, position: val.position, wage: val.wage}
       }));
     })
   }
