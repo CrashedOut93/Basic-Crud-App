@@ -78,6 +78,7 @@ function App() {
                   <h3>Wage: {val.wage}</h3>
                   <div>
                     {" "}
+                    <input type='text' placeholder='2000...' /> {" "}
                   </div>
                 </div>
               );
