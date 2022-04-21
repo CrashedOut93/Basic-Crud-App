@@ -79,6 +79,7 @@ function App() {
                   <div>
                     {" "}
                     <input type='text' placeholder='2000...' /> {" "}
+                    <button>Update</button>
                   </div>
                 </div>
               );
