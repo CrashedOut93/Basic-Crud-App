@@ -8,6 +8,7 @@ function App() {
   const [country, setCountry] = useState('');
   const [position, setPosition] = useState('');
   const [wage, setWage] = useState(0);
+  const
 
   const [employeeList, setEmployeeList] = useState([]);
 
