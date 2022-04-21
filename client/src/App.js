@@ -37,7 +37,7 @@ function App() {
   }
 
   const updateEmployeeWage = () => {
-    Axios.put('http://localhost:3001/update',)
+    Axios.put('http://localhost:3001/update', {wage: newWage, id: id})
   }
 
   const displayInfo = () => {
