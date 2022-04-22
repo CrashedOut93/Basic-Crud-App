@@ -50,8 +50,12 @@ function App() {
     console.log(name + age + country + position + wage)
   }
 
-  const deleteEmployees = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`)
+  const deleteEmployee = (id) => {
+    Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
+      setEmployeeList(employeeList.filter((val) => {
+          return val.id != id
+      }))
+    })
   }
 
   return (
@@ -103,7 +107,7 @@ function App() {
                       }}
                       /> {" "}
                     <button onClick={() => {updateEmployeeWage(val.id)}}>Update</button>
-                    <button onClick={() => {deleteEmployees(val.id)}}>Delete</button>
+                    <button onClick={() => {deleteEmployee(val.id)}}>Delete</button>
                   </div>
                 </div>
               );
