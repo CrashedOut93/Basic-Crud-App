@@ -50,8 +50,8 @@ function App() {
     console.log(name + age + country + position + wage)
   }
 
-  const deleteEmployees = () => {
-    
+  const deleteEmployees = (id) => {
+    Axios.delete(`http://localhost:3001/delete/${id}`)
   }
 
   return (
@@ -103,7 +103,7 @@ function App() {
                       }}
                       /> {" "}
                     <button onClick={() => {updateEmployeeWage(val.id)}}>Update</button>
-                    <button>Delete</button>
+                    <button onClick={() => {deleteEmployees(val.id)}}>Delete</button>
                   </div>
                 </div>
               );
