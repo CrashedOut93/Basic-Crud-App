@@ -40,7 +40,7 @@ function App() {
     Axios.put('http://localhost:3001/update', {wage: newWage, id: id}).then(
       (response) => {
       setEmployeeList(employeeList.map((val) => {
-          return val.id == id ? {id: val.id, name: val.name, age: val.age, country: val.country, position: val.position, wage: val.newWage}
+          return val.id == id ? {id: val.id, name: val.name, age: val.age, country: val.country, position: val.position, wage: newWage}
           : val
       }));
     })
@@ -48,6 +48,10 @@ function App() {
 
   const displayInfo = () => {
     console.log(name + age + country + position + wage)
+  }
+
+  const deleteEmployees = () => {
+    
   }
 
   return (
@@ -99,6 +103,7 @@ function App() {
                       }}
                       /> {" "}
                     <button onClick={() => {updateEmployeeWage(val.id)}}>Update</button>
+                    <button>Delete</button>
                   </div>
                 </div>
               );
