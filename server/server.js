@@ -7,10 +7,10 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    user: 'root',
-    host: 'localhost',
-    password: 'password',
-    database: 'employeeTest',
+    user: 'b0ed7be3a07223',
+    host: 'us-cdbr-east-05.cleardb.net',
+    password: '9138b9a7',
+    database: 'heroku_3cd521099d85ca3',
 });
 //Test Version
 // const db = mysql.createConnection({
