@@ -12,6 +12,13 @@ const db = mysql.createConnection({
     password: 'password',
     database: 'employeeTest',
 });
+//Test Version
+// const db = mysql.createConnection({
+//     user: 'root',
+//     host: 'localhost',
+//     password: 'password',
+//     database: 'employeeTest',
+// });
 
 app.post('/create', (req, res) => {
     const name = req.body.name;
@@ -71,3 +78,5 @@ app.delete('/delete/:id', (req, res) => {
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+mysql://b0ed7be3a07223:9138b9a7@us-cdbr-east-05.cleardb.net/heroku_3cd521099d85ca3?reconnect=true
