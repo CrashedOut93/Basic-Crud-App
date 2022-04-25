@@ -18,7 +18,7 @@ function App() {
   const [employeeList, setEmployeeList] = useState([]);
 
   const addEmployee = () => {
-    Axios.post('http://localhost:3001/create', {
+    Axios.post('https://basic-crud--app.herokuapp.com/create', {
       name: name, 
       age: age, 
       country: country, 
@@ -36,13 +36,13 @@ function App() {
   }
 
   const getEmployees = () =>{
-    Axios.get('http://localhost:3001/employees').then((response) => {
+    Axios.get('https://basic-crud--app.herokuapp.com/employees').then((response) => {
       setEmployeeList(response.data);
     });
   }
 
   const updateEmployeeInfo = (id) => {
-    Axios.put('http://localhost:3001/update', {wage: newWage, age: newAge, position: newPosition, country: newCountry, name: newName, id: id}).then(
+    Axios.put('https://basic-crud--app.herokuapp.com/update', {wage: newWage, age: newAge, position: newPosition, country: newCountry, name: newName, id: id}).then(
       (response) => {
       setEmployeeList(employeeList.map((val) => {
           return val.id == id ? {id: val.id, name: newName, age: newAge, country: newCountry, position: newPosition, wage: newWage}
@@ -56,7 +56,7 @@ function App() {
   }
 
   const deleteEmployee = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
+    Axios.delete(`https://basic-crud--app.herokuapp.com/delete/${id}`).then((response) => {
       setEmployeeList(employeeList.filter((val) => {
           return val.id != id
       }))
