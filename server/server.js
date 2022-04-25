@@ -2,24 +2,24 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
-const request = require('request');
+// const request = require('request');
 
 app.use(cors());
 app.use(express.json());
 
-const db = mysql.createConnection({
-    user: 'b0ed7be3a07223',
-    host: 'us-cdbr-east-05.cleardb.net',
-    password: '9138b9a7',
-    database: 'heroku_3cd521099d85ca3',
-});
-//Test Version
 // const db = mysql.createConnection({
-//     user: 'root',
-//     host: 'localhost',
-//     password: 'password',
-//     database: 'employeeTest',
+//     user: 'b0ed7be3a07223',
+//     host: 'us-cdbr-east-05.cleardb.net',
+//     password: '9138b9a7',
+//     database: 'heroku_3cd521099d85ca3',
 // });
+//Test Version
+const db = mysql.createConnection({
+    user: 'root',
+    host: 'localhost',
+    password: 'password',
+    database: 'employeeTest',
+});
 
 app.post('/create', (req, res) => {
     const name = req.body.name;
@@ -76,8 +76,11 @@ app.delete('/delete/:id', (req, res) => {
     })
 })
 
-app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+// app.listen(process.env.PORT || PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+// });
+app.listen(3001, () => {
+    console.log('Server running on port 3001');
 });
 
 //mysql:b0ed7be3a07223:9138b9a7@us-cdbr-east-05.cleardb.net/heroku_3cd521099d85ca3?reconnect=true
