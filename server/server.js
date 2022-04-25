@@ -79,4 +79,4 @@ app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
 
-mysql://b0ed7be3a07223:9138b9a7@us-cdbr-east-05.cleardb.net/heroku_3cd521099d85ca3?reconnect=true
+//mysql:b0ed7be3a07223:9138b9a7@us-cdbr-east-05.cleardb.net/heroku_3cd521099d85ca3?reconnect=true
